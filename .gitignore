@@ -5,3 +5,6 @@
 
 # Maven build output
 target/
+
+# Package ZIPs
+*.v*.zip
