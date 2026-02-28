@@ -49,6 +49,19 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+            <!-- Run BEAST with morph-models on module path:
+                 mvn -pl beast-morph-models exec:exec -Dbeast.args="examples/M3982.xml"
+                 mvn -pl beast-morph-models exec:exec -Dbeast.args="-validate examples/M3982.xml" -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.5.0</version>
+                <configuration>
+                    <executable>java</executable>
+                    <workingDirectory>${maven.multiModuleProjectDirectory}</workingDirectory>
+                    <commandlineArgs>--module-path %classpath -DBEAST_PACKAGE_PATH=${project.build.outputDirectory} -m beast.base/beast.base.minimal.BeastMain ${beast.args}</commandlineArgs>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
