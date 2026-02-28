@@ -1,7 +1,7 @@
 morph-models
 ============
 
-Models for discrete morphological character data in [BEAST 3](https://github.com/alexeid/beast3modular).
+Models for discrete morphological character data in [BEAST 3](https://github.com/CompEvol/beast3).
 
 Implements the Lewis MK and MKv substitution models (Lewis, 2001), along with ordinal and nested ordinal variants for ordered character data.
 

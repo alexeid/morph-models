@@ -73,7 +73,7 @@
     <repositories>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/alexeid/beast3modular</url>
+            <url>https://maven.pkg.github.com/CompEvol/beast3</url>
         </repository>
     </repositories>
 
