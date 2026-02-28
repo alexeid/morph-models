@@ -2,3 +2,6 @@
 /.idea
 /morph-models.iml
 /out
+
+# Maven build output
+target/

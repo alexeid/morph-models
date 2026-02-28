@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>beast</groupId>
+        <artifactId>morph-models-parent</artifactId>
+        <version>1.3.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>beast-morph-models-fx</artifactId>
+    <name>BEAST Morph Models FX</name>
+
+    <dependencies>
+        <!-- Internal -->
+        <dependency>
+            <groupId>beast</groupId>
+            <artifactId>beast-morph-models</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>beast</groupId>
+            <artifactId>beast-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>beast</groupId>
+            <artifactId>beast-fx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>beast</groupId>
+            <artifactId>beast-pkgmgmt</artifactId>
+        </dependency>
+
+        <!-- JavaFX -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+        </dependency>
+    </dependencies>
+</project>
