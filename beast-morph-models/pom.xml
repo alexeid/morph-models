@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>beast</groupId>
+        <groupId>io.github.alexeid</groupId>
         <artifactId>morph-models-parent</artifactId>
         <version>1.3.0-SNAPSHOT</version>
     </parent>
@@ -16,11 +16,11 @@
     <dependencies>
         <!-- Internal -->
         <dependency>
-            <groupId>beast</groupId>
+            <groupId>io.github.alexeid</groupId>
             <artifactId>beast-base</artifactId>
         </dependency>
         <dependency>
-            <groupId>beast</groupId>
+            <groupId>io.github.alexeid</groupId>
             <artifactId>beast-pkgmgmt</artifactId>
         </dependency>
 
@@ -61,6 +61,22 @@
                         <goals><goal>copy-resources</goal></goals>
                         <configuration>
                             <outputDirectory>${project.build.directory}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${maven.multiModuleProjectDirectory}</directory>
+                                    <includes>
+                                        <include>version.xml</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>embed-version-xml-in-jar</id>
+                        <phase>generate-resources</phase>
+                        <goals><goal>copy-resources</goal></goals>
+                        <configuration>
+                            <outputDirectory>${project.build.outputDirectory}</outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>${maven.multiModuleProjectDirectory}</directory>
