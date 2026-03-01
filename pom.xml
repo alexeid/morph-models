@@ -25,25 +25,30 @@
         <beast.version>2.8.0-SNAPSHOT</beast.version>
         <javafx.version>25.0.2</javafx.version>
         <junit.version>5.8.2</junit.version>
+        <beast.pkg.name>MM</beast.pkg.name>
+        <beast.pkg.version>1.3.0</beast.pkg.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- BEAST 3 modules -->
+            <!-- BEAST 3 modules (provided by the BEAST runtime environment) -->
             <dependency>
                 <groupId>beast</groupId>
                 <artifactId>beast-pkgmgmt</artifactId>
                 <version>${beast.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>beast</groupId>
                 <artifactId>beast-base</artifactId>
                 <version>${beast.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>beast</groupId>
                 <artifactId>beast-fx</artifactId>
                 <version>${beast.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <!-- Internal modules -->
@@ -53,11 +58,12 @@
                 <version>${project.version}</version>
             </dependency>
 
-            <!-- JavaFX -->
+            <!-- JavaFX (provided by the BEAST runtime environment) -->
             <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-controls</artifactId>
                 <version>${javafx.version}</version>
+                <scope>provided</scope>
             </dependency>
 
             <!-- Testing -->
