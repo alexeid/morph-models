@@ -23,7 +23,7 @@ Implements the Lewis MK and MKv substitution models (Lewis, 2001), along with or
 Requires BEAST 3 snapshot artifacts installed locally:
 
 ```bash
-cd ~/Git/beast3modular
+cd ~/Git/beast3
 mvn install -DskipTests
 ```
 
@@ -74,13 +74,13 @@ sources and javadoc JARs, signs everything with GPG, and uploads to Maven Centra
 BEAST 3 users can then install with:
 
 ```
-Package Manager > Install from Maven > io.github.alexeid:beast-morph-models:1.3.0
+Package Manager > Install from Maven > io.github.compevol:beast-morph-models:1.3.0
 ```
 
 Or from the command line:
 
 ```bash
-packagemanager -maven io.github.alexeid:beast-morph-models:1.3.0
+packagemanager -maven io.github.compevol:beast-morph-models:1.3.0
 ```
 
 ## References
