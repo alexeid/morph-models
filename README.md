@@ -77,6 +77,12 @@ BEAST 3 users can then install with:
 Package Manager > Install from Maven > io.github.alexeid:beast-morph-models:1.3.0
 ```
 
+Or from the command line:
+
+```bash
+packagemanager -maven io.github.alexeid:beast-morph-models:1.3.0
+```
+
 ## References
 
 Lewis, P. O. (2001). A likelihood approach to estimating phylogeny from discrete morphological character data. *Systematic Biology*, 50(6), 913–925.
