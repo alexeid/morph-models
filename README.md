@@ -20,11 +20,18 @@ Implements the Lewis MK and MKv substitution models (Lewis, 2001), along with or
 
 ## Building
 
-Requires BEAST 3 snapshot artifacts installed locally:
+BEAST 3 dependencies are resolved from [GitHub Packages](https://github.com/CompEvol/beast3/packages) (or Maven Central, if published there). For GitHub Packages, add a [personal access token](https://github.com/settings/tokens) (classic) with `read:packages` scope to `~/.m2/settings.xml`:
 
-```bash
-cd ~/Git/beast3
-mvn install -DskipTests
+```xml
+<settings>
+  <servers>
+    <server>
+      <id>github</id>
+      <username>YOUR_GITHUB_USERNAME</username>
+      <password>YOUR_GITHUB_PAT</password>
+    </server>
+  </servers>
+</settings>
 ```
 
 Then build morph-models:
@@ -33,6 +40,13 @@ Then build morph-models:
 cd ~/Git/morph-models
 mvn compile
 mvn test -pl beast-morph-models
+```
+
+Alternatively, you can install BEAST 3 from source (no GitHub auth needed):
+
+```bash
+cd ~/Git/beast3
+mvn install -DskipTests
 ```
 
 ## Running
